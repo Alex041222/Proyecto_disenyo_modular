@@ -29,31 +29,38 @@ public class Main {
 			// Codigo para buscar por origen
 			String buscarO = BuscarOrigen.buscarO(lugar);
 			System.out.println(buscarO);
-
-			System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
+			
+			System.out.println("Usuario selecciona ordenar por precio de mayor a menor");
 			// Codigo para ordenar de mayor a menor precio
-
+			 OrdenarPrecios.ordenarAscendente(hierba, precio);
+			 
 			System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
-			// Codigo para ordenar de mayor a menor precio
-
+			// Codigo para ordenar de menor a mayor precio
+			 OrdenarPrecios.ordenarDescendente(hierba, precio);
+			
 			System.out.println("Usuario selecciona varios productos para comprar");
 			// Codigo para seleccionar primer producto
+			  
 			nombre = "Hierba de los bosques";
 			cantidad = 3;
-
+			Carrito.seleccionarProducto(nombre, cantidad );
 			// Codigo para seleccionar segundo producto
+			
 			nombre = "El oro verde";
 			cantidad = 1;
-
+			Carrito.seleccionarProducto(nombre, cantidad);
 			// Codigo para seleccionar tercer producto
+			
 			nombre = "La seta feliz";
 			cantidad = 2.5;
+			Carrito.seleccionarProducto(nombre, cantidad);
 			
 			System.out.println("Usuario elimina el segundo elemento de su carrito");
 			// Codigo para eliminar elemento del carrito
-
+			 Carrito.eliminarProducto("El oro verde");
 			System.out.println("Usuario finaliza la compra");
 			// Codigo para finalizar la compra y que salga el total de la compra
+			 Carrito.finalizarCompra();
 		}
 		
 		//Funciones extra que considereis necesarias
